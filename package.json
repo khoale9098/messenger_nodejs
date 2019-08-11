@@ -1,0 +1,22 @@
+{
+  "name": "messenger_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khoale9098/messenger_nodejs.git"
+  },
+  "author": "khoale9098@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khoale9098/messenger_nodejs/issues"
+  },
+  "homepage": "https://github.com/khoale9098/messenger_nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
