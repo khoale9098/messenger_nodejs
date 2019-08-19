@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js"
+    "start": "babel-node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/khoale9098/messenger_nodejs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bluebird": "^3.5.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0-beta2",
+    "mongoose": "^5.6.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
