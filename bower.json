@@ -1,0 +1,21 @@
+{
+    "name": "messenger",
+    "authors": [
+      "khoale9098@gmail.com"
+    ],
+    "description": "Manage frontend libraries.",
+    "main": "server/server.js",
+    "license": "",
+    "private": true,
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+    ],
+    "dependencies": {
+      "bower_components": "https://github.com/trungquan17/awesome-chat-third-party-libraries.git"
+    }
+  }
+  
