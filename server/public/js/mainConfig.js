@@ -1,6 +1,3 @@
-/**
- * Created by https://trungquandev.com's author on 25/02/2018.
- */
 function nineScrollLeft() {
   $('.left').niceScroll({
     smoothscroll: true,

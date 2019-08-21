@@ -3,7 +3,7 @@ import {home,auth} from '../controllers/index';
 let router = express.Router();
 
 let initRoutes = (app) => {
-    router.get('/', home);
+    router.get('/', home.getHome);
     router.get('/login', auth);
     return app.use('/', router)
 }

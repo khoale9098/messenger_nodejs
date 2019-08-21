@@ -1,6 +1,5 @@
 import express from 'express'
 import expressEjsExtend from 'express-ejs-extend'
-import path from 'path'
 //Config view engine for app
 let configViewEngine = (app) => {
     app.use(express.static("./server/public"));
