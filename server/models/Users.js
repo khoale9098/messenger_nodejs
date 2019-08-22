@@ -18,19 +18,27 @@ let UserSchema = new Schema({
     facebook: {
         uid: String,
         token: String,
-        email:{
+        email: {
             type: String, trim: true
         }
     },
     google: {
         uid: String,
         token: String,
-        email:{
+        email: {
             type: String, trim: true
         }
     },
-    createAt: { type: Number, default: Date.now},
-    updateAt: { type: Number, default: null},
-    deleteAt: { type: Number, default: null},
-})
+    createAt: { type: Number, default: Date.now },
+    updateAt: { type: Number, default: null },
+    deleteAt: { type: Number, default: null },
+});
+UserSchema.statics = {
+    createNew(item) {
+        return this.create(item);
+    },
+    findByEmail(email){
+        return this.findOne({"local.email":email}).exec();
+    }
+}
 module.exports = mongoose.model("user", UserSchema)
