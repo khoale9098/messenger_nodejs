@@ -8,14 +8,18 @@ export const transErrors = {
     account_in_use: "Email này đã được sử dụng",
     account_removed: "Tài khoản đã bị gỡ khỏi hệ thống, nếu tin rằng điều này là hiểu nhầm, vui lòng liên lạc với Khoa Le!",
     account_not_active: "Email này đã được đăng kí nhưng chưa được actived, vui lòng kiểm tra email hoặc liên lạc với Khoa Le!",
-    token_undefined: "Token không tồn tại!"
+    token_undefined: "Token không tồn tại!",
+    login_failed: "Sai tài khoản hoặc mật khẩu!",
+    server_error:"Có lỗi ở phía máy chủ, vui lòng liên hệ với Khoa Le"
 }
 export const transSuccess = {
     userCreated: (userEmail) => {
         return `Tài khoản <strong>${userEmail}</strong> đã được tạo, vui lòng kiểm tra lại email để actived tài khoản trước khi đăng nhập`
     },
-    account_actived:"Kích hoạt tài khoản thành công, bạn đã có thể đăng nhập vào ứng dụng!"
-
+    account_actived:"Kích hoạt tài khoản thành công, bạn đã có thể đăng nhập vào ứng dụng!",
+    loginSuccess: ( username)=>{
+        return `Xin chào ${username}.`;
+    }
 }
 export const transMail = {
     subject: "Coffee Chat: Xác nhận kính hoạt tài khoản",
