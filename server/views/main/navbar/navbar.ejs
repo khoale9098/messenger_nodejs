@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="https://trungquandev.com/" target="__blank">
-                <img src="/images/logo_favicon/logo-trungquandev.png" alt="logo-trungquandev">
+                <img src="/images/logo_favicon/logo.png" alt="logo">
             </a>
         </div>
         <div class="col-sm-3 no-padding">
@@ -47,13 +47,13 @@
                                     <span data-uid="${ user.id }">
                                         <img class="avatar-small" src="/images/users/default-avatar-trungquandev-01.jpg"
                                             alt="">
-                                        <strong>Trung Quân</strong> đã chấp nhận lời mời kết bạn của bạn!
+                                        <strong>Khoa Le</strong> đã chấp nhận lời mời kết bạn của bạn!
                                     </span><br><br><br>
 
                                     <span data-uid="${ user.id }">
                                         <img class="avatar-small" src="/images/users/default-avatar-trungquandev-02.jpg"
                                             alt="">
-                                        <strong>Trung Quân</strong> đã gửi cho bạn một lời mời kết bạn!
+                                        <strong>Khoa Le</strong> đã gửi cho bạn một lời mời kết bạn!
                                     </span><br><br><br>
                                 </div>
                                 <div class="seeAll"><a href="#">Xem tất cả</a></div>
@@ -63,8 +63,8 @@
                 </li>
                 <li class="dropdown" id="dropdown-navbar-user" data-uid="user._id">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <img class="avatar-small" src="/images/users//default-avatar-trungquandev-02.jpg" alt="">
-                        Trung Quân
+                        <img id ="navbar-avatar"class="avatar-small"  src="/images/users/<%= user.avatar %>" alt="">
+                        <%= user.username %>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">

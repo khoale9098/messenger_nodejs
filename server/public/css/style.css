@@ -423,10 +423,10 @@ label:focus,
 }
 
 .navbar-brand>img {
-  margin: -12px 0px 0px 7px;
-  width: 150px;
-  -webkit-filter: brightness(130%);
-  filter: brightness(130%);
+  margin: -5px 0px 0px 35px;
+  width: 120px;
+  -webkit-filter: brightness(180%);
+  filter: brightness(180%);
 }
 
 .navbar {
@@ -1274,4 +1274,7 @@ label:focus,
 
 #user-profile-modal input:hover, #user-profile-modal input:focus {
   border-color: #576574
+}
+.user-modal-alert-error, .user-modal-alert-success{
+  display: none;
 }

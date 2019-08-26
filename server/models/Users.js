@@ -7,7 +7,7 @@ let UserSchema = new Schema({
     gender: { type: String, default: "male" },
     phone: { type: Number, default: null },
     address: { type: String, default: null },
-    avatar: { type: String, default: "avarta-default.jpg" },
+    avatar: { type: String, default: "avatar-default.jpg" },
     role: { type: String, default: "user" }, // Phan quyen
     local: {
         email: { type: String, trim: true },
@@ -37,27 +37,37 @@ UserSchema.statics = {
     createNew(item) {
         return this.create(item);
     },
-    findByEmail(email){
-        return this.findOne({"local.email":email}).exec();
+    findByEmail(email) {
+        return this.findOne({ "local.email": email }).exec();
     },
-    removeById(id){
+    removeById(id) {
         return this.findByIdAndRemove(id).exec();
     },
-    findByToken(token){
-        return this.findOne({"local.verifyToken":token}).exec()
+    findByToken(token) {
+        return this.findOne({ "local.verifyToken": token }).exec()
     },
-    verify(token){
+    verify(token) {
         return this.findOneAndUpdate(
-            {"local.verifyToken": token},
-            {"local.isActive":true, "local.verifyToken": null}
+            { "local.verifyToken": token },
+            { "local.isActive": true, "local.verifyToken": null }
         ).exec()
     },
-    findUserById(id){
+    findUserById(id) {
         return this.findById(id).exec();
+    },
+    findByFacebookUid(uid) {
+        return this.findOne({ "facebook.uid": uid }).exec();
+    },
+    findByGoogleUid(uid) {
+        return this.findOne({ "google.uid": uid }).exec();
+    },
+    updateUser(id, item) {
+        return this.findByIdAndUpdate(id, item).exec();
+        //Trả về dữ liệu cũ
     }
 }
 UserSchema.methods = {
-    comparePassword(password){
+    comparePassword(password) {
         return bcrypt.compare(password, this.local.password) //return a promise has result is true or fasle
     }
 }

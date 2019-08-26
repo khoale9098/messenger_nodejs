@@ -339,7 +339,7 @@ hr {
 
 .big-login,
 .big-register {
-  background-color: #00bbff;
+  background-color: orange;
   color: #FFFFFF;
   border-radius: 7px;
   border-width: 2px;
@@ -352,19 +352,19 @@ hr {
 }
 
 .big-login:hover {
-  background-color: #00A4E4;
+  background-color: #EA8025;
   color: #FFFFFF;
 }
 
 .big-register {
   background-color: rgba(0, 0, 0, .0);
-  color: #00bbff;
-  border-color: #00bbff;
+  color: orange;
+  border-color: orange;
 }
 
 .big-register:hover {
-  border-color: #00A4E4;
-  color: #00A4E4;
+  border-color: #EA8025;
+  color: #EA8025;
 }
 
 label {
