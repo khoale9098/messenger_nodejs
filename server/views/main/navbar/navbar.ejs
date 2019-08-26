@@ -63,8 +63,8 @@
                 </li>
                 <li class="dropdown" id="dropdown-navbar-user" data-uid="user._id">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <img id ="navbar-avatar"class="avatar-small"  src="/images/users/<%= user.avatar %>" alt="">
-                        <%= user.username %>
+                        <img id="navbar-avatar" class="avatar-small" src="/images/users/<%= user.avatar %>" alt="">
+                        <span id="navbar-username"><%= user.username %></span>
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">

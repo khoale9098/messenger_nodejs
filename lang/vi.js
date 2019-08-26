@@ -2,7 +2,11 @@ export const transValidation = {
     email_incorrect: "Email phải có dạng example@gmail.com nha!",
     gender_incorrect: "Giới tính kìa",
     password_incorrect: "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, chữ số và ký tự đặc biệt",
-    password_confirmation_incorrect: "Nhập lại mật khẩu chưa chính xác!"
+    password_confirmation_incorrect: "Nhập lại mật khẩu chưa chính xác!",
+    update_username:"Username giới hạn trong khoảng 3-17 kí tự và không được phép sử dụng kí tự đặc biệt",
+    update_gender:"Dữ liệu giới tính có vấn đề!",
+    update_address:"Địa chỉ giới hạn trong khoảng 3-30 kí tự",
+    update_phone:"Số điện thoại Việt Nam bắt đầu bằng số 0, giới hạn trong khoảng 10 đến 11 kí tự"
 }
 export const transErrors = {
     account_in_use: "Email này đã được sử dụng",
@@ -23,7 +27,8 @@ export const transSuccess = {
         return `Xin chào ${username}.`;
     },
     logout_success: "Đăng xuất tài khoản thành công! Hẹn gặp lại!",
-    avatar_updated: "Cập nhật ảnh đại diện thành công!"
+    avatar_updated: "Cập nhật ảnh đại diện thành công!",
+    user_info_updated: "Cập nhật thông tin người dùng thành công!"
 }
 export const transMail = {
     subject: "Coffee Chat: Xác nhận kính hoạt tài khoản",
