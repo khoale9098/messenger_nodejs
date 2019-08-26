@@ -587,7 +587,7 @@ label:focus,
 }
 
 .container-fluid .row.content {
-  height: 91vh;
+ height: 92.5vh;
 }
 
 .no-padding {
@@ -1276,5 +1276,8 @@ label:focus,
   border-color: #576574
 }
 .user-modal-alert-error, .user-modal-alert-success{
+  display: none;
+}
+.user-modal-password-alert-success, .user-modal-password-alert-error{
   display: none;
 }

@@ -11,7 +11,6 @@ let postRegister = async (req, res) => {
     let errorArr = [];
     //
     let successArr = [];
-    //
     let validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
         let errors = Object.values(validationErrors.mapped());
@@ -51,7 +50,6 @@ let getLogout = (req, res) =>{
     // req.flash("success", transSuccess.logout_success );
     return res.redirect("/login-register")
 }
-
 let checkLoggedIn = (req, res, next)=>{
     //Check isAuthenticated cua passport
     if(!req.isAuthenticated()){

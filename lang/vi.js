@@ -12,11 +12,13 @@ export const transErrors = {
     account_in_use: "Email này đã được sử dụng",
     account_removed: "Tài khoản đã bị gỡ khỏi hệ thống, nếu tin rằng điều này là hiểu nhầm, vui lòng liên lạc với Khoa Le!",
     account_not_active: "Email này đã được đăng kí nhưng chưa được actived, vui lòng kiểm tra email hoặc liên lạc với Khoa Le!",
+    account_undefined: "Tài khoản không tồn tại!",
     token_undefined: "Token không tồn tại!",
     login_failed: "Sai tài khoản hoặc mật khẩu!",
     server_error:"Có lỗi ở phía máy chủ, vui lòng liên hệ với Khoa Le",
     avatar_type: "Kiểu file không hợp lệ!",
-    avatar_size: "Ảnh upload tối đa là 1MB"
+    avatar_size: "Ảnh upload tối đa là 1MB",
+    user_current_password_failed: "Mật khẩu hiện tại không chính xác!"
 }
 export const transSuccess = {
     userCreated: (userEmail) => {
@@ -28,7 +30,8 @@ export const transSuccess = {
     },
     logout_success: "Đăng xuất tài khoản thành công! Hẹn gặp lại!",
     avatar_updated: "Cập nhật ảnh đại diện thành công!",
-    user_info_updated: "Cập nhật thông tin người dùng thành công!"
+    user_info_updated: "Cập nhật thông tin người dùng thành công!",
+    user_password_updated: "Cập nhật mật khẩu thành công!",
 }
 export const transMail = {
     subject: "Coffee Chat: Xác nhận kính hoạt tài khoản",
