@@ -10,11 +10,11 @@ function callFindUsers(e) {
             alertify.notify("Lỗi từ khoá tìm kiếm, chỉ cho phép ký tự chữ cái, số và khoảng trống!", "error", 7);
             return false
         }
-        $.get(`/contact/find-users/${keyword}`, function(data)
-        {
+        $.get(`/contact/find-users/${keyword}`, function (data) {
             //Tìm thẻ ul trong id: find-user
             $("#find-user ul").html(data);
-            console.log(data)
+            addcontact(); //js/addContact.js
+            removeRequestContact();
         })
     }
 }

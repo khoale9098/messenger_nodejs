@@ -22,8 +22,45 @@ ContactSchema.statics = {
     findAllByUser(userId) {
         return this.find({
             $or: [
-                {"userId": userId},
-                {"contactId": userId}
+                { "userId": userId },
+                { "contactId": userId }
+            ]
+        }).exec();
+    },
+    //Kiểm tra tồn tại
+    /**
+     * 
+     * @param {id} userId 
+     * @param {id} contactId 
+     */
+    checkExists(userId, contactId) {
+        return this.findOne({
+            $or: [
+                {
+                    $and: [
+                        { "userId": userId },
+                        { "contactId": contactId }
+                    ]
+                },
+                {
+                    $and: [
+                        { "userId": contactId },
+                        { "contactId": userId }
+                    ]
+                },
+            ]
+        }).exec();
+    },
+    /**
+     * 
+     * @param {string} userId 
+     * @param {string} contactId 
+     */
+    removeRequestContact(userId, contactId) {
+        return this.deleteOne({
+            $and: [
+                { "userId": userId },
+                { "contactId": contactId }
             ]
         }).exec();
     }

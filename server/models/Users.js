@@ -80,15 +80,16 @@ UserSchema.statics = {
                 { "local.isActive": true },
                 {
                     $or: [
-                        { "username": { $regex: keyword } }, // Tìm những thằng username gần giống nhất với keyword bằng $regex
-                        { "local.email": { $regex: keyword } },
-                        { "facebook.email": { $regex: keyword } },
-                        { "google.email": { $regex: keyword } }
+                        { "username": { $regex: new RegExp(keyword, "i") } }, // Tìm những thằng username gần giống nhất với keyword bằng $regex
+                        { "local.email": { $regex: new RegExp(keyword, "i") } },
+                        { "facebook.email": { $regex: new RegExp(keyword, "i") } },
+                        { "google.email": { $regex: new RegExp(keyword, "i") } }
                     ]
                 }
             ]
         }, { _id: 1, username: 1, address: 1, avatar: 1 }).exec() //:1 : cho phép lấy ra
-    }
+    },
+  
 }
 UserSchema.methods = {
     comparePassword(password) {
